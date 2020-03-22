@@ -5,7 +5,10 @@ import {
 
 
 export const InitialState = {
-
+  SubStatus: '',
+  Depth: 0,
+  Balast: 0,
+  Air: 100,
   Pumps: {
   },
 
@@ -22,12 +25,23 @@ export const InitialState = {
 
 export const AppReducer = (state = InitialState, action) => {
   switch (action.type) {
+    case Actions.ChangeAir:
+      return { ...state, Air: action.Air }
+    case Actions.ChangeBalast:
+      return { ...state, Balast: action.Balast }
+    case Actions.ChangeDepth:
+      return { ...state, Depth: action.Depth }
+
     case Actions.ChangeTimer:
       return {
         ...state,
-        RefChangeTimer: action.ChangeTimer,
+        RefChangeTimer: action.RefChangeTimer,
       }
-    // Valves & Pumps & Flows
+
+    case Actions.SetSubStatus:
+      return { ...state, SubStatus: action.SubStatus }
+
+    // Valves & Pumps
     case Actions.ToggleValve:
       return {
         ...state,
@@ -38,14 +52,7 @@ export const AppReducer = (state = InitialState, action) => {
         ...state,
         Pumps: action.Pumps,
       }
-    case Actions.FlowChange:
-      return {
-        ...state,
-        Flows: {
-          ...state.Flows,
-          [action.PumpName]: state.Flows[action.PumpName] + action.FlowChangeBy,
-        },
-      }
+
     default:
       return state
   }

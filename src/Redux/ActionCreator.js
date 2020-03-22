@@ -15,7 +15,7 @@ export const ChangeTimer = (refChangeTimer) => (
       })
     }
 
-    const RefReactorLevelTimer = setInterval(() => {
+    const RefChangeTimer = setInterval(() => {
       dispatch({ type: Cst.Actions.Changes })
     }, Cst.CstTiming.Update)
 
@@ -23,16 +23,21 @@ export const ChangeTimer = (refChangeTimer) => (
     // so it can be stopped, and know that it's already running
     return dispatch({
       type: Cst.Actions.ChangeTimer,
-      RefReactorLevelTimer,
+      RefChangeTimer,
     })
   }
 )
 
 
-// Set energy in reactor
-export const SetStart = (Start) => {
+// Set start conditions
+export const SetStart = (StartDepth, StartAir, StartBalance) => (
+  {
+    type: Cst.Actions.SetStartup,
+    StartAir,
+    StartBalance,
+    StartDepth,
 
-}
+  })
 
 /*
 // set pump level, then calc flow

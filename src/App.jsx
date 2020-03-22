@@ -1,7 +1,7 @@
 import React from 'react'
 
 import './App.css'
-import DivePanel from './Panels/SubDive'
+import SubDive from './Panels/SubDive'
 
 import Store from './Redux/Store'
 import { CstText } from './Cst'
@@ -13,7 +13,7 @@ function App() {
 
       <main>
         <Store>
-          <DivePanel />
+          <SubDive />
         </Store>
       </main>
 

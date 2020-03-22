@@ -19,11 +19,15 @@ const SubDive = () => {
   }, [])// eslint-disable-line
 */
   // const Fouten = useSelector((state) => state.Fouten)
+  const SubStatus = useSelector((state) => state.SubStatus)
 
   return (
     <Container full className="SubDive">
 
-      <ControlPanel Name={CstText.Panel.Title} StatusStatus="">
+      <ControlPanel
+        Name={CstText.PanelTxt.Title}
+        StatusStatus={SubStatus}
+      >
         <DivePanel />
       </ControlPanel>
 
