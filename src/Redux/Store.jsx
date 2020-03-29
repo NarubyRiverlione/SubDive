@@ -6,13 +6,16 @@ import thunkMiddleware from 'redux-thunk'
 
 import PropTypes from 'prop-types'
 import { createLogger } from 'redux-logger'
-
+import { Actions } from '../Cst'
 import { AppReducer, InitialState } from './AppReducer'
 
 // gebruik de logger middleware enkel in dev
 const LoggerMiddleWare = createLogger({
   // eslint-disable-next-line
-  predicate: (getState, action) => process.env.NODE_ENV !== 'production'
+  predicate: (getState, action) => (
+    process.env.NODE_ENV !== 'production'
+    && action.type !== Actions.TickTimer // log TickTimer actie niet
+  ),
 })
 
 // bundel alle middleware in 1 enhancer, maak dan de store

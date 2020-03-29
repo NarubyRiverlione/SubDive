@@ -16,7 +16,9 @@ const Button = ({
   }, [Color, TextColor, SetPressed, setBackground, setBorderColor, setButtonTextColor])
 
   const Click = () => {
-    if (cb) { cb(Caption) }
+    if (cb) {
+      cb(Caption)
+    }
   }
 
   return (

@@ -1,43 +1,54 @@
 import * as Cst from '../Cst'
 
-
-// change the water level in the reactor
-// every  CstTiming.ReactorLevelUpdate tick
-// by the previous calculated ReactorLevelChange
-export const ChangeTimer = (refChangeTimer) => (
+export const StopTimer = (refChangeTimer) => (
   (dispatch) => {
     // stop interval if ref to timer is provided
     if (refChangeTimer) {
       clearInterval(refChangeTimer)
-      return dispatch({
-        type: Cst.Actions.ChangeTimer,
-        RefChangeTimer: null,
-      })
     }
+    return dispatch({
+      type: Cst.Actions.StopTimer,
+    })
+  })
 
-    const RefChangeTimer = setInterval(() => {
-      dispatch({ type: Cst.Actions.Changes })
+export const StartTimer = () => (
+  (dispatch) => {
+    const RefTimer = setInterval(() => {
+      // every tick -> call Tick Action
+      dispatch({ type: Cst.Actions.TickTimer, dispatch })
     }, Cst.CstTiming.Update)
 
     // store ref to the interval timer in state
     // so it can be stopped, and know that it's already running
     return dispatch({
-      type: Cst.Actions.ChangeTimer,
-      RefChangeTimer,
+      type: Cst.Actions.StartTimer,
+      RefChangeTimer: RefTimer,
     })
   }
 )
 
 
 // Set start conditions
-export const SetStart = (StartDepth, StartAir, StartBalance) => (
+export const SetStart = (StartDepth, StartAir, StartBalast) => (
   {
     type: Cst.Actions.SetStartup,
     StartAir,
-    StartBalance,
+    StartBalast,
     StartDepth,
 
   })
+// change Air by previous set delta, but limited
+// export const ChangeAir = () => (
+//   { type: Cst.Actions.ChangeAir })
+
+// set delta to change Air by time
+export const SetDeltaAir = (Delta) => (
+  { type: Cst.Actions.SetDeltaAir, Delta }
+)
+// set delta to change Balast by time
+export const SetDeltaBalast = (Delta) => (
+  { type: Cst.Actions.SetDeltaBalast, Delta }
+)
 
 /*
 // set pump level, then calc flow
