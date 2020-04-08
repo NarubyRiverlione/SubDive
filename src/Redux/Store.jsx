@@ -15,6 +15,9 @@ const LoggerMiddleWare = createLogger({
   predicate: (getState, action) => (
     process.env.NODE_ENV !== 'production'
     && action.type !== Actions.TickTimer // log TickTimer actie niet
+    && action.type !== Actions.ChangeAir // log TickTimer actie niet
+    && action.type !== Actions.ChangeBalast // log TickTimer actie niet
+
   ),
 })
 

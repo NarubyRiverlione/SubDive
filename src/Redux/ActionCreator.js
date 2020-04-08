@@ -15,7 +15,9 @@ export const StartTimer = () => (
   (dispatch) => {
     const RefTimer = setInterval(() => {
       // every tick -> call Tick Action
-      dispatch({ type: Cst.Actions.TickTimer, dispatch })
+      dispatch({ type: Cst.Actions.ChangeAir, dispatch })
+      dispatch({ type: Cst.Actions.ChangeBalast, dispatch })
+      // dispatch({ type: Cst.Actions.TickTimer, dispatch })
     }, Cst.CstTiming.Update)
 
     // store ref to the interval timer in state

@@ -29,6 +29,7 @@ export const Actions = {
   ChangeAir: 'CHANGE_AIR',
   SetDeltaAir: 'SET_DELTA_AIR',
 
+  ChangeBalast: 'CHANGE_BALAST',
   SetDeltaBalast: 'SET_DELTA_BALAST',
 
   StartTimer: 'SAVE_REF_TIMER',
