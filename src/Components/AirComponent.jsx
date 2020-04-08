@@ -1,48 +1,72 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { Col, Row } from 'react-reflex-grid'
-import { SetDeltaAir } from '../Redux/ActionCreator'
 
-import { CstText, CstDelta } from '../Cst'
+import { SetAirChargingStatus } from '../Redux/ActionCreator'
+import { CstText } from '../Cst'
 import Display from './ControlElements/Display'
 import Button from './ControlElements/Button'
 
 const AirComponent = () => {
   const { PanelTxt: { Air: AirTxt } } = CstText
-  const { Air, DeltaAir } = useSelector((state) => ({ Air: state.Air, DeltaAir: state.DeltaAir }))
+  const { Air, AirCharging } = useSelector((state) => ({
+    Air: state.Air,
+    AirCharging: state.AirCharging,
+  }))
   const dispatch = useDispatch()
 
-  const StartCharging = () => {
-    // already charging ?
-    if (DeltaAir > 0) return
-    // start by setting delta
-    dispatch(SetDeltaAir(CstDelta.ChargeAir))
-  }
 
   return (
-    <>
-
-      <Row>
-        <Display
-          Title={AirTxt.Title}
-          Width={50}
-          Text={Air.toString(10)}
-          Suffix={AirTxt.Suffix}
-        />
-      </Row>
+    <React.Fragment>
+      {// Station title & display
+      }
       <Row>
         <Col auto>
-          <Button
-            Width={100}
-            Caption={AirTxt.BtnFill}
-            Color="SteelBlue"
-            TextColor="FloralWhite"
-            cb={() => StartCharging()}
+          <Display
+            Title={AirTxt.Title}
+            Width={50}
+            Text={Air.toString(10)}
+            Suffix={AirTxt.Suffix}
           />
         </Col>
       </Row>
 
-    </>
+      <Row direction-column>
+        {// Action title
+        }
+        <Col size={1}>
+          <span className="subtitel">{AirTxt.Charge}</span>
+        </Col>
+
+        { // Cmd buttons
+        }
+
+        <Col size={1} className="grid">
+          <Button
+            Width={100}
+            Caption={AirTxt.BtnStart}
+            Color="SteelBlue"
+            TextColor="FloralWhite"
+            cb={() => dispatch(SetAirChargingStatus(true))}
+            SetPressed={AirCharging}
+          />
+        </Col>
+
+        <Col size={1} className="grid">
+          <Button
+            Width={100}
+            Caption={AirTxt.BtnStop}
+            Color="SteelBlue"
+            TextColor="FloralWhite"
+            cb={() => dispatch(SetAirChargingStatus(false))}
+            SetPressed={!AirCharging}
+          />
+        </Col>
+        <Col auto>
+          <div />
+        </Col>
+      </Row>
+    </React.Fragment>
   )
 }
 

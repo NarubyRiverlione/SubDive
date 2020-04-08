@@ -2,15 +2,12 @@
 font-family: Display;
 src: url(./Fonts/LiquidCrystal-Normal.otf);
 }
-.RecircLabels {
-  margin-left: -15px;
-  padding:5px;
-}
+
 .SubDive {
   background-color: darkgrey;
   height: 100%;
   width:100%;
-  padding:1em;
+  padding:0.5em;
 }
 
 [class*="col-"] {
@@ -48,7 +45,7 @@ font-weight: normal;
 margin: 5px 0px;
 }
 
-.text, .subtitel, .RecircLabels{
+.text, .subtitel{
 font-family:'Passion One','cursivexs' ;
 color:CornflowerBlue ;
 fill:CornflowerBlue ;

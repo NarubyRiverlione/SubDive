@@ -2,46 +2,93 @@ import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { Row, Col } from 'react-reflex-grid'
 
-import { SetDeltaBalast } from '../Redux/ActionCreator'
-import { CstText, CstDelta } from '../Cst'
+import { SetBalastFilling, SetBalastBlowing } from '../Redux/ActionCreator'
+import { CstText } from '../Cst'
 import Display from './ControlElements/Display'
 import Button from './ControlElements/Button'
 
+
 const BalastComponent = () => {
   const { PanelTxt: { Balast: BalastTxt } } = CstText
-  const Balast = useSelector((state) => state.Balast)
+  const { Balast, BalastFilling, BalastBlowing } = useSelector((state) => ({
+    Balast: state.Balast,
+    BalastFilling: state.BalastFilling,
+    BalastBlowing: state.BalastBlowing,
+  }))
   const dispatch = useDispatch()
+
+
   return (
-    <>
-      <Row>
-        <Display
-          Title={BalastTxt.Title}
-          Width={50}
-          Text={Balast.toString(10)}
-          Suffix={BalastTxt.Suffix}
-        />
-      </Row>
+    <React.Fragment>
       <Row>
         <Col auto>
-          <Button
-            Width={100}
-            Caption={BalastTxt.BtnMin}
-            Color="SteelBlue"
-            TextColor="FloralWhite"
-            cb={() => dispatch(SetDeltaBalast(-CstDelta.Balast))}
-          />
-        </Col>
-        <Col auto>
-          <Button
-            Width={100}
-            Caption={BalastTxt.BtnPlus}
-            Color="SteelBlue"
-            TextColor="FloralWhite"
-            cb={() => dispatch(SetDeltaBalast(CstDelta.Balast))}
+          <Display
+            Title={BalastTxt.Title}
+            Width={50}
+            Text={Balast.toString(10)}
+            Suffix={BalastTxt.Suffix}
           />
         </Col>
       </Row>
-    </>
+
+      <Row>
+        <Col size={6}>
+          <Row direction-column>
+            <Col size={1}>
+              <span className="subtitel">{BalastTxt.Fill}</span>
+            </Col>
+            <Col size={1} className="grid">
+              <Button
+                Width={100}
+                Caption={BalastTxt.BtnStart}
+                Color="SteelBlue"
+                TextColor="FloralWhite"
+                cb={() => dispatch(SetBalastFilling(true))}
+                SetPressed={BalastFilling}
+              />
+            </Col>
+            <Col size={1} className="grid">
+              <Button
+                Width={100}
+                Caption={BalastTxt.BtnStop}
+                Color="SteelBlue"
+                TextColor="FloralWhite"
+                cb={() => dispatch(SetBalastFilling(false))}
+                SetPressed={!BalastFilling}
+              />
+            </Col>
+          </Row>
+        </Col>
+
+        <Col size={6}>
+          <Row direction-column>
+            <Col size={1}>
+              <span className="subtitel">{BalastTxt.Blow}</span>
+            </Col>
+            <Col size={1} className="grid">
+              <Button
+                Width={100}
+                Caption={BalastTxt.BtnStart}
+                Color="SteelBlue"
+                TextColor="FloralWhite"
+                cb={() => dispatch(SetBalastBlowing(true))}
+                SetPressed={BalastBlowing}
+              />
+            </Col>
+            <Col size={1} className="grid">
+              <Button
+                Width={100}
+                Caption={BalastTxt.BtnStop}
+                Color="SteelBlue"
+                TextColor="FloralWhite"
+                cb={() => dispatch(SetBalastBlowing(false))}
+                SetPressed={!BalastBlowing}
+              />
+            </Col>
+          </Row>
+        </Col>
+      </Row>
+    </React.Fragment>
   )
 }
 

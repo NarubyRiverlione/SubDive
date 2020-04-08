@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import { Row } from 'react-reflex-grid'
+import { Row, Col } from 'react-reflex-grid'
 
 import { CstText } from '../Cst'
 import Display from './ControlElements/Display'
@@ -12,12 +12,14 @@ const DepthComponent = () => {
 
   return (
     <Row>
-      <Display
-        Title={DepthTxt.Title}
-        Width={50}
-        Text={Depth.toString(10)}
-        Suffix={DepthTxt.Suffix}
-      />
+      <Col auto>
+        <Display
+          Title={DepthTxt.Title}
+          Width={50}
+          Text={Depth.toString(10)}
+          Suffix={DepthTxt.Suffix}
+        />
+      </Col>
     </Row>
   )
 }

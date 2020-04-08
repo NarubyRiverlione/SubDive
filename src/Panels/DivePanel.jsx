@@ -8,9 +8,9 @@ import BalastComponent from '../Components/BalastComponent'
 import DepthComponent from '../Components/DepthComponent'
 
 const DivePanel = () => (
-  <>
+  <React.Fragment>
     <Row>
-      <Col auto>
+      <Col size={3}>
         <AirComponent />
       </Col>
 
@@ -18,11 +18,11 @@ const DivePanel = () => (
         <BalastComponent />
       </Col>
 
-      <Col auto>
+      <Col size={4}>
         <DepthComponent />
       </Col>
     </Row>
-  </>
+  </React.Fragment>
 )
 
 export default DivePanel
