@@ -22,7 +22,7 @@ const SubDive = () => {
     <Container full className="SubDive">
       <ControlPanel
         Name={CstText.PanelTxt.Title}
-        StatusStatus={SubStatus}
+        Status={SubStatus}
       >
         <DivePanel />
       </ControlPanel>

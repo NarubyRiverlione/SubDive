@@ -13,6 +13,8 @@
   "homepage": "./",
   "private": true,
   "dependencies": {
+    "google-protobuf": "^3.6.1",
+    "grpc-web": "^1.0.7",
     "cross-env": "^7.0.2",
     "electron-is-dev": "^1.1.0",
     "prop-types": "^15.7.2",

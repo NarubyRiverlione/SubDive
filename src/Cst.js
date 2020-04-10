@@ -1,7 +1,10 @@
+
+export const envoyProxy = 'http://localhost:8080'
+
 export const CstText = {
   Title: 'Sub Dive',
   PanelTxt: {
-    Title: 'Dive Panel',
+    Title: 'Conn',
     Air: {
       Title: 'Air',
       Suffix: '%',
@@ -24,7 +27,7 @@ export const CstText = {
 }
 
 export const Actions = {
-  ChangeDepth: 'CHANGE_DEPTH',
+  SetDepth: 'SET_DEPTH',
 
   SetAir: 'SET_AIR',
   SetAirCharging: 'CHARING_AIR',

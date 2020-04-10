@@ -14,9 +14,9 @@ const LoggerMiddleWare = createLogger({
   // eslint-disable-next-line
   predicate: (getState, action) => (
     process.env.NODE_ENV !== 'production'
-    && action.type !== Actions.TickTimer // log TickTimer actie niet
-    && action.type !== Actions.ChangeAir // log TickTimer actie niet
-    && action.type !== Actions.ChangeBalast // log TickTimer actie niet
+    && action.type !== Actions.SetAir // log TickTimer actie niet
+    && action.type !== Actions.SetDepth // log TickTimer actie niet
+    && action.type !== Actions.SetBalast // log TickTimer actie niet
 
   ),
 })
