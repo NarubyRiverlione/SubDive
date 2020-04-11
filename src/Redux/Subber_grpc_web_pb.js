@@ -1,4 +1,3 @@
-/* eslint-disable */
 /**
  * @fileoverview gRPC-Web generated client stub for 
  * @enhanceable
@@ -23,21 +22,21 @@ const proto = require('./Subber_pb.js');
  * @final
  */
 proto.ConnClient =
-  function (hostname, credentials, options) {
-    if (!options) options = {};
-    options['format'] = 'text';
+    function(hostname, credentials, options) {
+  if (!options) options = {};
+  options['format'] = 'text';
 
-    /**
-     * @private @const {!grpc.web.GrpcWebClientBase} The client
-     */
-    this.client_ = new grpc.web.GrpcWebClientBase(options);
+  /**
+   * @private @const {!grpc.web.GrpcWebClientBase} The client
+   */
+  this.client_ = new grpc.web.GrpcWebClientBase(options);
 
-    /**
-     * @private @const {string} The hostname
-     */
-    this.hostname_ = hostname;
+  /**
+   * @private @const {string} The hostname
+   */
+  this.hostname_ = hostname;
 
-  };
+};
 
 
 /**
@@ -49,21 +48,21 @@ proto.ConnClient =
  * @final
  */
 proto.ConnPromiseClient =
-  function (hostname, credentials, options) {
-    if (!options) options = {};
-    options['format'] = 'text';
+    function(hostname, credentials, options) {
+  if (!options) options = {};
+  options['format'] = 'text';
 
-    /**
-     * @private @const {!grpc.web.GrpcWebClientBase} The client
-     */
-    this.client_ = new grpc.web.GrpcWebClientBase(options);
+  /**
+   * @private @const {!grpc.web.GrpcWebClientBase} The client
+   */
+  this.client_ = new grpc.web.GrpcWebClientBase(options);
 
-    /**
-     * @private @const {string} The hostname
-     */
-    this.hostname_ = hostname;
+  /**
+   * @private @const {string} The hostname
+   */
+  this.hostname_ = hostname;
 
-  };
+};
 
 
 /**
@@ -81,7 +80,7 @@ const methodDescriptor_Conn_StartStatusUpdates = new grpc.web.MethodDescriptor(
    * @param {!proto.EmptyRequest} request
    * @return {!Uint8Array}
    */
-  function (request) {
+  function(request) {
     return request.serializeBinary();
   },
   proto.ConnResponse.deserializeBinary
@@ -100,7 +99,7 @@ const methodInfo_Conn_StartStatusUpdates = new grpc.web.AbstractClientBase.Metho
    * @param {!proto.EmptyRequest} request
    * @return {!Uint8Array}
    */
-  function (request) {
+  function(request) {
     return request.serializeBinary();
   },
   proto.ConnResponse.deserializeBinary
@@ -115,13 +114,13 @@ const methodInfo_Conn_StartStatusUpdates = new grpc.web.AbstractClientBase.Metho
  *     The XHR Node Readable Stream
  */
 proto.ConnClient.prototype.startStatusUpdates =
-  function (request, metadata) {
-    return this.client_.serverStreaming(this.hostname_ +
+    function(request, metadata) {
+  return this.client_.serverStreaming(this.hostname_ +
       '/Conn/StartStatusUpdates',
       request,
       metadata || {},
       methodDescriptor_Conn_StartStatusUpdates);
-  };
+};
 
 
 /**
@@ -132,13 +131,13 @@ proto.ConnClient.prototype.startStatusUpdates =
  *     The XHR Node Readable Stream
  */
 proto.ConnPromiseClient.prototype.startStatusUpdates =
-  function (request, metadata) {
-    return this.client_.serverStreaming(this.hostname_ +
+    function(request, metadata) {
+  return this.client_.serverStreaming(this.hostname_ +
       '/Conn/StartStatusUpdates',
       request,
       metadata || {},
       methodDescriptor_Conn_StartStatusUpdates);
-  };
+};
 
 
 /**
@@ -156,7 +155,7 @@ const methodDescriptor_Conn_EndStatusUpdates = new grpc.web.MethodDescriptor(
    * @param {!proto.EmptyRequest} request
    * @return {!Uint8Array}
    */
-  function (request) {
+  function(request) {
     return request.serializeBinary();
   },
   proto.StatusResponse.deserializeBinary
@@ -175,7 +174,7 @@ const methodInfo_Conn_EndStatusUpdates = new grpc.web.AbstractClientBase.MethodI
    * @param {!proto.EmptyRequest} request
    * @return {!Uint8Array}
    */
-  function (request) {
+  function(request) {
     return request.serializeBinary();
   },
   proto.StatusResponse.deserializeBinary
@@ -193,14 +192,14 @@ const methodInfo_Conn_EndStatusUpdates = new grpc.web.AbstractClientBase.MethodI
  *     The XHR Node Readable Stream
  */
 proto.ConnClient.prototype.endStatusUpdates =
-  function (request, metadata, callback) {
-    return this.client_.rpcCall(this.hostname_ +
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
       '/Conn/EndStatusUpdates',
       request,
       metadata || {},
       methodDescriptor_Conn_EndStatusUpdates,
       callback);
-  };
+};
 
 
 /**
@@ -212,13 +211,13 @@ proto.ConnClient.prototype.endStatusUpdates =
  *     A native promise that resolves to the response
  */
 proto.ConnPromiseClient.prototype.endStatusUpdates =
-  function (request, metadata) {
-    return this.client_.unaryCall(this.hostname_ +
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
       '/Conn/EndStatusUpdates',
       request,
       metadata || {},
       methodDescriptor_Conn_EndStatusUpdates);
-  };
+};
 
 
 /**
@@ -230,21 +229,21 @@ proto.ConnPromiseClient.prototype.endStatusUpdates =
  * @final
  */
 proto.AirClient =
-  function (hostname, credentials, options) {
-    if (!options) options = {};
-    options['format'] = 'text';
+    function(hostname, credentials, options) {
+  if (!options) options = {};
+  options['format'] = 'text';
 
-    /**
-     * @private @const {!grpc.web.GrpcWebClientBase} The client
-     */
-    this.client_ = new grpc.web.GrpcWebClientBase(options);
+  /**
+   * @private @const {!grpc.web.GrpcWebClientBase} The client
+   */
+  this.client_ = new grpc.web.GrpcWebClientBase(options);
 
-    /**
-     * @private @const {string} The hostname
-     */
-    this.hostname_ = hostname;
+  /**
+   * @private @const {string} The hostname
+   */
+  this.hostname_ = hostname;
 
-  };
+};
 
 
 /**
@@ -256,21 +255,21 @@ proto.AirClient =
  * @final
  */
 proto.AirPromiseClient =
-  function (hostname, credentials, options) {
-    if (!options) options = {};
-    options['format'] = 'text';
+    function(hostname, credentials, options) {
+  if (!options) options = {};
+  options['format'] = 'text';
 
-    /**
-     * @private @const {!grpc.web.GrpcWebClientBase} The client
-     */
-    this.client_ = new grpc.web.GrpcWebClientBase(options);
+  /**
+   * @private @const {!grpc.web.GrpcWebClientBase} The client
+   */
+  this.client_ = new grpc.web.GrpcWebClientBase(options);
 
-    /**
-     * @private @const {string} The hostname
-     */
-    this.hostname_ = hostname;
+  /**
+   * @private @const {string} The hostname
+   */
+  this.hostname_ = hostname;
 
-  };
+};
 
 
 /**
@@ -288,7 +287,7 @@ const methodDescriptor_Air_Info = new grpc.web.MethodDescriptor(
    * @param {!proto.EmptyRequest} request
    * @return {!Uint8Array}
    */
-  function (request) {
+  function(request) {
     return request.serializeBinary();
   },
   proto.ValueResponse.deserializeBinary
@@ -307,7 +306,7 @@ const methodInfo_Air_Info = new grpc.web.AbstractClientBase.MethodInfo(
    * @param {!proto.EmptyRequest} request
    * @return {!Uint8Array}
    */
-  function (request) {
+  function(request) {
     return request.serializeBinary();
   },
   proto.ValueResponse.deserializeBinary
@@ -325,14 +324,14 @@ const methodInfo_Air_Info = new grpc.web.AbstractClientBase.MethodInfo(
  *     The XHR Node Readable Stream
  */
 proto.AirClient.prototype.info =
-  function (request, metadata, callback) {
-    return this.client_.rpcCall(this.hostname_ +
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
       '/Air/Info',
       request,
       metadata || {},
       methodDescriptor_Air_Info,
       callback);
-  };
+};
 
 
 /**
@@ -344,34 +343,34 @@ proto.AirClient.prototype.info =
  *     A native promise that resolves to the response
  */
 proto.AirPromiseClient.prototype.info =
-  function (request, metadata) {
-    return this.client_.unaryCall(this.hostname_ +
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
       '/Air/Info',
       request,
       metadata || {},
       methodDescriptor_Air_Info);
-  };
+};
 
 
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
  *   !proto.EmptyRequest,
- *   !proto.StatusResponse>}
+ *   !proto.StartStopResponse>}
  */
 const methodDescriptor_Air_ChargeStart = new grpc.web.MethodDescriptor(
   '/Air/ChargeStart',
   grpc.web.MethodType.UNARY,
   proto.EmptyRequest,
-  proto.StatusResponse,
+  proto.StartStopResponse,
   /**
    * @param {!proto.EmptyRequest} request
    * @return {!Uint8Array}
    */
-  function (request) {
+  function(request) {
     return request.serializeBinary();
   },
-  proto.StatusResponse.deserializeBinary
+  proto.StartStopResponse.deserializeBinary
 );
 
 
@@ -379,18 +378,18 @@ const methodDescriptor_Air_ChargeStart = new grpc.web.MethodDescriptor(
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
  *   !proto.EmptyRequest,
- *   !proto.StatusResponse>}
+ *   !proto.StartStopResponse>}
  */
 const methodInfo_Air_ChargeStart = new grpc.web.AbstractClientBase.MethodInfo(
-  proto.StatusResponse,
+  proto.StartStopResponse,
   /**
    * @param {!proto.EmptyRequest} request
    * @return {!Uint8Array}
    */
-  function (request) {
+  function(request) {
     return request.serializeBinary();
   },
-  proto.StatusResponse.deserializeBinary
+  proto.StartStopResponse.deserializeBinary
 );
 
 
@@ -399,20 +398,20 @@ const methodInfo_Air_ChargeStart = new grpc.web.AbstractClientBase.MethodInfo(
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.Error, ?proto.StatusResponse)}
+ * @param {function(?grpc.web.Error, ?proto.StartStopResponse)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.StatusResponse>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.StartStopResponse>|undefined}
  *     The XHR Node Readable Stream
  */
 proto.AirClient.prototype.chargeStart =
-  function (request, metadata, callback) {
-    return this.client_.rpcCall(this.hostname_ +
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
       '/Air/ChargeStart',
       request,
       metadata || {},
       methodDescriptor_Air_ChargeStart,
       callback);
-  };
+};
 
 
 /**
@@ -420,38 +419,38 @@ proto.AirClient.prototype.chargeStart =
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.StatusResponse>}
+ * @return {!Promise<!proto.StartStopResponse>}
  *     A native promise that resolves to the response
  */
 proto.AirPromiseClient.prototype.chargeStart =
-  function (request, metadata) {
-    return this.client_.unaryCall(this.hostname_ +
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
       '/Air/ChargeStart',
       request,
       metadata || {},
       methodDescriptor_Air_ChargeStart);
-  };
+};
 
 
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
  *   !proto.EmptyRequest,
- *   !proto.StatusResponse>}
+ *   !proto.StartStopResponse>}
  */
 const methodDescriptor_Air_ChargeStop = new grpc.web.MethodDescriptor(
   '/Air/ChargeStop',
   grpc.web.MethodType.UNARY,
   proto.EmptyRequest,
-  proto.StatusResponse,
+  proto.StartStopResponse,
   /**
    * @param {!proto.EmptyRequest} request
    * @return {!Uint8Array}
    */
-  function (request) {
+  function(request) {
     return request.serializeBinary();
   },
-  proto.StatusResponse.deserializeBinary
+  proto.StartStopResponse.deserializeBinary
 );
 
 
@@ -459,18 +458,18 @@ const methodDescriptor_Air_ChargeStop = new grpc.web.MethodDescriptor(
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
  *   !proto.EmptyRequest,
- *   !proto.StatusResponse>}
+ *   !proto.StartStopResponse>}
  */
 const methodInfo_Air_ChargeStop = new grpc.web.AbstractClientBase.MethodInfo(
-  proto.StatusResponse,
+  proto.StartStopResponse,
   /**
    * @param {!proto.EmptyRequest} request
    * @return {!Uint8Array}
    */
-  function (request) {
+  function(request) {
     return request.serializeBinary();
   },
-  proto.StatusResponse.deserializeBinary
+  proto.StartStopResponse.deserializeBinary
 );
 
 
@@ -479,20 +478,20 @@ const methodInfo_Air_ChargeStop = new grpc.web.AbstractClientBase.MethodInfo(
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.Error, ?proto.StatusResponse)}
+ * @param {function(?grpc.web.Error, ?proto.StartStopResponse)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.StatusResponse>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.StartStopResponse>|undefined}
  *     The XHR Node Readable Stream
  */
 proto.AirClient.prototype.chargeStop =
-  function (request, metadata, callback) {
-    return this.client_.rpcCall(this.hostname_ +
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
       '/Air/ChargeStop',
       request,
       metadata || {},
       methodDescriptor_Air_ChargeStop,
       callback);
-  };
+};
 
 
 /**
@@ -500,17 +499,17 @@ proto.AirClient.prototype.chargeStop =
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.StatusResponse>}
+ * @return {!Promise<!proto.StartStopResponse>}
  *     A native promise that resolves to the response
  */
 proto.AirPromiseClient.prototype.chargeStop =
-  function (request, metadata) {
-    return this.client_.unaryCall(this.hostname_ +
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
       '/Air/ChargeStop',
       request,
       metadata || {},
       methodDescriptor_Air_ChargeStop);
-  };
+};
 
 
 /**
@@ -522,21 +521,21 @@ proto.AirPromiseClient.prototype.chargeStop =
  * @final
  */
 proto.DepthClient =
-  function (hostname, credentials, options) {
-    if (!options) options = {};
-    options['format'] = 'text';
+    function(hostname, credentials, options) {
+  if (!options) options = {};
+  options['format'] = 'text';
 
-    /**
-     * @private @const {!grpc.web.GrpcWebClientBase} The client
-     */
-    this.client_ = new grpc.web.GrpcWebClientBase(options);
+  /**
+   * @private @const {!grpc.web.GrpcWebClientBase} The client
+   */
+  this.client_ = new grpc.web.GrpcWebClientBase(options);
 
-    /**
-     * @private @const {string} The hostname
-     */
-    this.hostname_ = hostname;
+  /**
+   * @private @const {string} The hostname
+   */
+  this.hostname_ = hostname;
 
-  };
+};
 
 
 /**
@@ -548,21 +547,21 @@ proto.DepthClient =
  * @final
  */
 proto.DepthPromiseClient =
-  function (hostname, credentials, options) {
-    if (!options) options = {};
-    options['format'] = 'text';
+    function(hostname, credentials, options) {
+  if (!options) options = {};
+  options['format'] = 'text';
 
-    /**
-     * @private @const {!grpc.web.GrpcWebClientBase} The client
-     */
-    this.client_ = new grpc.web.GrpcWebClientBase(options);
+  /**
+   * @private @const {!grpc.web.GrpcWebClientBase} The client
+   */
+  this.client_ = new grpc.web.GrpcWebClientBase(options);
 
-    /**
-     * @private @const {string} The hostname
-     */
-    this.hostname_ = hostname;
+  /**
+   * @private @const {string} The hostname
+   */
+  this.hostname_ = hostname;
 
-  };
+};
 
 
 /**
@@ -580,7 +579,7 @@ const methodDescriptor_Depth_Info = new grpc.web.MethodDescriptor(
    * @param {!proto.EmptyRequest} request
    * @return {!Uint8Array}
    */
-  function (request) {
+  function(request) {
     return request.serializeBinary();
   },
   proto.ValueResponse.deserializeBinary
@@ -599,7 +598,7 @@ const methodInfo_Depth_Info = new grpc.web.AbstractClientBase.MethodInfo(
    * @param {!proto.EmptyRequest} request
    * @return {!Uint8Array}
    */
-  function (request) {
+  function(request) {
     return request.serializeBinary();
   },
   proto.ValueResponse.deserializeBinary
@@ -617,14 +616,14 @@ const methodInfo_Depth_Info = new grpc.web.AbstractClientBase.MethodInfo(
  *     The XHR Node Readable Stream
  */
 proto.DepthClient.prototype.info =
-  function (request, metadata, callback) {
-    return this.client_.rpcCall(this.hostname_ +
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
       '/Depth/Info',
       request,
       metadata || {},
       methodDescriptor_Depth_Info,
       callback);
-  };
+};
 
 
 /**
@@ -636,13 +635,13 @@ proto.DepthClient.prototype.info =
  *     A native promise that resolves to the response
  */
 proto.DepthPromiseClient.prototype.info =
-  function (request, metadata) {
-    return this.client_.unaryCall(this.hostname_ +
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
       '/Depth/Info',
       request,
       metadata || {},
       methodDescriptor_Depth_Info);
-  };
+};
 
 
 /**
@@ -654,21 +653,21 @@ proto.DepthPromiseClient.prototype.info =
  * @final
  */
 proto.BalastClient =
-  function (hostname, credentials, options) {
-    if (!options) options = {};
-    options['format'] = 'text';
+    function(hostname, credentials, options) {
+  if (!options) options = {};
+  options['format'] = 'text';
 
-    /**
-     * @private @const {!grpc.web.GrpcWebClientBase} The client
-     */
-    this.client_ = new grpc.web.GrpcWebClientBase(options);
+  /**
+   * @private @const {!grpc.web.GrpcWebClientBase} The client
+   */
+  this.client_ = new grpc.web.GrpcWebClientBase(options);
 
-    /**
-     * @private @const {string} The hostname
-     */
-    this.hostname_ = hostname;
+  /**
+   * @private @const {string} The hostname
+   */
+  this.hostname_ = hostname;
 
-  };
+};
 
 
 /**
@@ -680,21 +679,21 @@ proto.BalastClient =
  * @final
  */
 proto.BalastPromiseClient =
-  function (hostname, credentials, options) {
-    if (!options) options = {};
-    options['format'] = 'text';
+    function(hostname, credentials, options) {
+  if (!options) options = {};
+  options['format'] = 'text';
 
-    /**
-     * @private @const {!grpc.web.GrpcWebClientBase} The client
-     */
-    this.client_ = new grpc.web.GrpcWebClientBase(options);
+  /**
+   * @private @const {!grpc.web.GrpcWebClientBase} The client
+   */
+  this.client_ = new grpc.web.GrpcWebClientBase(options);
 
-    /**
-     * @private @const {string} The hostname
-     */
-    this.hostname_ = hostname;
+  /**
+   * @private @const {string} The hostname
+   */
+  this.hostname_ = hostname;
 
-  };
+};
 
 
 /**
@@ -712,7 +711,7 @@ const methodDescriptor_Balast_Info = new grpc.web.MethodDescriptor(
    * @param {!proto.EmptyRequest} request
    * @return {!Uint8Array}
    */
-  function (request) {
+  function(request) {
     return request.serializeBinary();
   },
   proto.ValueResponse.deserializeBinary
@@ -731,7 +730,7 @@ const methodInfo_Balast_Info = new grpc.web.AbstractClientBase.MethodInfo(
    * @param {!proto.EmptyRequest} request
    * @return {!Uint8Array}
    */
-  function (request) {
+  function(request) {
     return request.serializeBinary();
   },
   proto.ValueResponse.deserializeBinary
@@ -749,14 +748,14 @@ const methodInfo_Balast_Info = new grpc.web.AbstractClientBase.MethodInfo(
  *     The XHR Node Readable Stream
  */
 proto.BalastClient.prototype.info =
-  function (request, metadata, callback) {
-    return this.client_.rpcCall(this.hostname_ +
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
       '/Balast/Info',
       request,
       metadata || {},
       methodDescriptor_Balast_Info,
       callback);
-  };
+};
 
 
 /**
@@ -768,34 +767,34 @@ proto.BalastClient.prototype.info =
  *     A native promise that resolves to the response
  */
 proto.BalastPromiseClient.prototype.info =
-  function (request, metadata) {
-    return this.client_.unaryCall(this.hostname_ +
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
       '/Balast/Info',
       request,
       metadata || {},
       methodDescriptor_Balast_Info);
-  };
+};
 
 
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
  *   !proto.EmptyRequest,
- *   !proto.StatusResponse>}
+ *   !proto.StartStopResponse>}
  */
 const methodDescriptor_Balast_BlowStart = new grpc.web.MethodDescriptor(
   '/Balast/BlowStart',
   grpc.web.MethodType.UNARY,
   proto.EmptyRequest,
-  proto.StatusResponse,
+  proto.StartStopResponse,
   /**
    * @param {!proto.EmptyRequest} request
    * @return {!Uint8Array}
    */
-  function (request) {
+  function(request) {
     return request.serializeBinary();
   },
-  proto.StatusResponse.deserializeBinary
+  proto.StartStopResponse.deserializeBinary
 );
 
 
@@ -803,18 +802,18 @@ const methodDescriptor_Balast_BlowStart = new grpc.web.MethodDescriptor(
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
  *   !proto.EmptyRequest,
- *   !proto.StatusResponse>}
+ *   !proto.StartStopResponse>}
  */
 const methodInfo_Balast_BlowStart = new grpc.web.AbstractClientBase.MethodInfo(
-  proto.StatusResponse,
+  proto.StartStopResponse,
   /**
    * @param {!proto.EmptyRequest} request
    * @return {!Uint8Array}
    */
-  function (request) {
+  function(request) {
     return request.serializeBinary();
   },
-  proto.StatusResponse.deserializeBinary
+  proto.StartStopResponse.deserializeBinary
 );
 
 
@@ -823,20 +822,20 @@ const methodInfo_Balast_BlowStart = new grpc.web.AbstractClientBase.MethodInfo(
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.Error, ?proto.StatusResponse)}
+ * @param {function(?grpc.web.Error, ?proto.StartStopResponse)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.StatusResponse>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.StartStopResponse>|undefined}
  *     The XHR Node Readable Stream
  */
 proto.BalastClient.prototype.blowStart =
-  function (request, metadata, callback) {
-    return this.client_.rpcCall(this.hostname_ +
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
       '/Balast/BlowStart',
       request,
       metadata || {},
       methodDescriptor_Balast_BlowStart,
       callback);
-  };
+};
 
 
 /**
@@ -844,38 +843,38 @@ proto.BalastClient.prototype.blowStart =
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.StatusResponse>}
+ * @return {!Promise<!proto.StartStopResponse>}
  *     A native promise that resolves to the response
  */
 proto.BalastPromiseClient.prototype.blowStart =
-  function (request, metadata) {
-    return this.client_.unaryCall(this.hostname_ +
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
       '/Balast/BlowStart',
       request,
       metadata || {},
       methodDescriptor_Balast_BlowStart);
-  };
+};
 
 
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
  *   !proto.EmptyRequest,
- *   !proto.StatusResponse>}
+ *   !proto.StartStopResponse>}
  */
 const methodDescriptor_Balast_BlowStop = new grpc.web.MethodDescriptor(
   '/Balast/BlowStop',
   grpc.web.MethodType.UNARY,
   proto.EmptyRequest,
-  proto.StatusResponse,
+  proto.StartStopResponse,
   /**
    * @param {!proto.EmptyRequest} request
    * @return {!Uint8Array}
    */
-  function (request) {
+  function(request) {
     return request.serializeBinary();
   },
-  proto.StatusResponse.deserializeBinary
+  proto.StartStopResponse.deserializeBinary
 );
 
 
@@ -883,18 +882,18 @@ const methodDescriptor_Balast_BlowStop = new grpc.web.MethodDescriptor(
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
  *   !proto.EmptyRequest,
- *   !proto.StatusResponse>}
+ *   !proto.StartStopResponse>}
  */
 const methodInfo_Balast_BlowStop = new grpc.web.AbstractClientBase.MethodInfo(
-  proto.StatusResponse,
+  proto.StartStopResponse,
   /**
    * @param {!proto.EmptyRequest} request
    * @return {!Uint8Array}
    */
-  function (request) {
+  function(request) {
     return request.serializeBinary();
   },
-  proto.StatusResponse.deserializeBinary
+  proto.StartStopResponse.deserializeBinary
 );
 
 
@@ -903,20 +902,20 @@ const methodInfo_Balast_BlowStop = new grpc.web.AbstractClientBase.MethodInfo(
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.Error, ?proto.StatusResponse)}
+ * @param {function(?grpc.web.Error, ?proto.StartStopResponse)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.StatusResponse>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.StartStopResponse>|undefined}
  *     The XHR Node Readable Stream
  */
 proto.BalastClient.prototype.blowStop =
-  function (request, metadata, callback) {
-    return this.client_.rpcCall(this.hostname_ +
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
       '/Balast/BlowStop',
       request,
       metadata || {},
       methodDescriptor_Balast_BlowStop,
       callback);
-  };
+};
 
 
 /**
@@ -924,38 +923,38 @@ proto.BalastClient.prototype.blowStop =
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.StatusResponse>}
+ * @return {!Promise<!proto.StartStopResponse>}
  *     A native promise that resolves to the response
  */
 proto.BalastPromiseClient.prototype.blowStop =
-  function (request, metadata) {
-    return this.client_.unaryCall(this.hostname_ +
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
       '/Balast/BlowStop',
       request,
       metadata || {},
       methodDescriptor_Balast_BlowStop);
-  };
+};
 
 
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
  *   !proto.EmptyRequest,
- *   !proto.StatusResponse>}
+ *   !proto.StartStopResponse>}
  */
 const methodDescriptor_Balast_FillStart = new grpc.web.MethodDescriptor(
   '/Balast/FillStart',
   grpc.web.MethodType.UNARY,
   proto.EmptyRequest,
-  proto.StatusResponse,
+  proto.StartStopResponse,
   /**
    * @param {!proto.EmptyRequest} request
    * @return {!Uint8Array}
    */
-  function (request) {
+  function(request) {
     return request.serializeBinary();
   },
-  proto.StatusResponse.deserializeBinary
+  proto.StartStopResponse.deserializeBinary
 );
 
 
@@ -963,18 +962,18 @@ const methodDescriptor_Balast_FillStart = new grpc.web.MethodDescriptor(
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
  *   !proto.EmptyRequest,
- *   !proto.StatusResponse>}
+ *   !proto.StartStopResponse>}
  */
 const methodInfo_Balast_FillStart = new grpc.web.AbstractClientBase.MethodInfo(
-  proto.StatusResponse,
+  proto.StartStopResponse,
   /**
    * @param {!proto.EmptyRequest} request
    * @return {!Uint8Array}
    */
-  function (request) {
+  function(request) {
     return request.serializeBinary();
   },
-  proto.StatusResponse.deserializeBinary
+  proto.StartStopResponse.deserializeBinary
 );
 
 
@@ -983,20 +982,20 @@ const methodInfo_Balast_FillStart = new grpc.web.AbstractClientBase.MethodInfo(
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.Error, ?proto.StatusResponse)}
+ * @param {function(?grpc.web.Error, ?proto.StartStopResponse)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.StatusResponse>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.StartStopResponse>|undefined}
  *     The XHR Node Readable Stream
  */
 proto.BalastClient.prototype.fillStart =
-  function (request, metadata, callback) {
-    return this.client_.rpcCall(this.hostname_ +
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
       '/Balast/FillStart',
       request,
       metadata || {},
       methodDescriptor_Balast_FillStart,
       callback);
-  };
+};
 
 
 /**
@@ -1004,38 +1003,38 @@ proto.BalastClient.prototype.fillStart =
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.StatusResponse>}
+ * @return {!Promise<!proto.StartStopResponse>}
  *     A native promise that resolves to the response
  */
 proto.BalastPromiseClient.prototype.fillStart =
-  function (request, metadata) {
-    return this.client_.unaryCall(this.hostname_ +
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
       '/Balast/FillStart',
       request,
       metadata || {},
       methodDescriptor_Balast_FillStart);
-  };
+};
 
 
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
  *   !proto.EmptyRequest,
- *   !proto.StatusResponse>}
+ *   !proto.StartStopResponse>}
  */
 const methodDescriptor_Balast_FillStop = new grpc.web.MethodDescriptor(
   '/Balast/FillStop',
   grpc.web.MethodType.UNARY,
   proto.EmptyRequest,
-  proto.StatusResponse,
+  proto.StartStopResponse,
   /**
    * @param {!proto.EmptyRequest} request
    * @return {!Uint8Array}
    */
-  function (request) {
+  function(request) {
     return request.serializeBinary();
   },
-  proto.StatusResponse.deserializeBinary
+  proto.StartStopResponse.deserializeBinary
 );
 
 
@@ -1043,18 +1042,18 @@ const methodDescriptor_Balast_FillStop = new grpc.web.MethodDescriptor(
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
  *   !proto.EmptyRequest,
- *   !proto.StatusResponse>}
+ *   !proto.StartStopResponse>}
  */
 const methodInfo_Balast_FillStop = new grpc.web.AbstractClientBase.MethodInfo(
-  proto.StatusResponse,
+  proto.StartStopResponse,
   /**
    * @param {!proto.EmptyRequest} request
    * @return {!Uint8Array}
    */
-  function (request) {
+  function(request) {
     return request.serializeBinary();
   },
-  proto.StatusResponse.deserializeBinary
+  proto.StartStopResponse.deserializeBinary
 );
 
 
@@ -1063,20 +1062,20 @@ const methodInfo_Balast_FillStop = new grpc.web.AbstractClientBase.MethodInfo(
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.Error, ?proto.StatusResponse)}
+ * @param {function(?grpc.web.Error, ?proto.StartStopResponse)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.StatusResponse>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.StartStopResponse>|undefined}
  *     The XHR Node Readable Stream
  */
 proto.BalastClient.prototype.fillStop =
-  function (request, metadata, callback) {
-    return this.client_.rpcCall(this.hostname_ +
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
       '/Balast/FillStop',
       request,
       metadata || {},
       methodDescriptor_Balast_FillStop,
       callback);
-  };
+};
 
 
 /**
@@ -1084,17 +1083,17 @@ proto.BalastClient.prototype.fillStop =
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.StatusResponse>}
+ * @return {!Promise<!proto.StartStopResponse>}
  *     A native promise that resolves to the response
  */
 proto.BalastPromiseClient.prototype.fillStop =
-  function (request, metadata) {
-    return this.client_.unaryCall(this.hostname_ +
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
       '/Balast/FillStop',
       request,
       metadata || {},
       methodDescriptor_Balast_FillStop);
-  };
+};
 
 
 module.exports = proto;

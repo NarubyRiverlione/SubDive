@@ -33,6 +33,8 @@ export const AppReducer = (state = InitialState, action) => {
     case Actions.SetBalastBlowing:
       return { ...state, BalastBlowing: action.BalastBlowing }
 
+    case Actions.SetDepth:
+      return { ...state, Depth: action.Depth }
 
     case Actions.SetSubStatus:
       return { ...state, SubStatus: action.SubStatus }
