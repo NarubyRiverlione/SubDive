@@ -42,4 +42,5 @@ export const Actions = {
 
 export const CstTiming = {
   Update: 1000,
+  RemoveStatusMsg: 5000,
 }

@@ -13,7 +13,7 @@ const ControlPanel = ({ Name, Status, children }) => (
       </Col>
       <Col size={6}>
         <Display
-          Width={300}
+          Width={500}
           Text={Status}
         />
       </Col>
